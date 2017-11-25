@@ -1,0 +1,10 @@
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 600px) {
+    .formWrapper {
+        flex-direction: row;
+    }
+}
