@@ -5,9 +5,7 @@ import Wrapper from './wrapper';
 export default class App extends Component {
 	render() {
 		return (
-			<Wrapper>
-				<Form />
-			</Wrapper>
+			<Form />
 		);
 	}
 }
