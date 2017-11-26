@@ -23,6 +23,7 @@
     "preact-cli": "^2.0.0"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "linkstate": "^1.1.0",
     "preact": "^8.2.1",
     "preact-compat": "^3.17.0",

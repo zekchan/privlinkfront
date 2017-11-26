@@ -19,6 +19,10 @@
     padding: 14px 26px 13px 26px;
 }
 
+.input::placeholder {
+    color: #d0d0d0;
+}
+
 .input:focus {
     box-shadow: 0 2px 2px 0 rgba(216, 216, 216, 0.5);
 }

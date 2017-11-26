@@ -1,18 +1,20 @@
 import { h, Component } from 'preact';
 import Input from '../input';
+import Select from '../select';
 import s from './style.css';
-import Wrapper from "../wrapper";
+import Wrapper from '../wrapper';
 
 const OPTIONS = [
-	1,
-	5,
 	10,
 	30,
 	60,
 	120,
 	200,
 	500
-];
+].map(value => ({
+	value,
+	label: `${value} seconds`
+}));
 
 const BASE_URL = 'http://138.68.77.86';
 export default class Form extends Component {
@@ -39,10 +41,12 @@ export default class Form extends Component {
 		return (
 			<Wrapper>
 				<form onSubmit={this.handleSubmit} ref={this.handleFormRef} className={s.formWrapper} novalidate>
-					<Input type="url" name="url" placeholder="Link address…" required />
-					<select name="ttl" required>
-						{OPTIONS.map(minutes => <option value={minutes * 60} key={minutes}>{minutes} minutes</option>)}
-					</select>
+					<div className={s.firstRow}>
+						<Input type="url" name="url" placeholder="Link address…" required />
+						<div className={s.selectWrapper}>
+							<Select options={OPTIONS} selected={OPTIONS[0]} />
+						</div>
+					</div>
 					<button type="submit">Create</button>
 				</form>
 				{
